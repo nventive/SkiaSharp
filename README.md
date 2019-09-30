@@ -9,7 +9,7 @@ load CanvasKit.
 To experiment with it, open the `SkiaSharpSource.sln` and build the `SkiaSharpSample.Wasm` project.
 
 This repository provides two packages:
-- `Uno.SkiaSharp.Wasm`, which provides basic SkiaSharp functionality
+- `Uno.SkiaSharp.Wasm` which provides basic SkiaSharp functionality
 - `Uno.SkiaSharp.Views` which provides the `SKXamlCanvas` control which enables software rendering support for iOS, Android and WebAssembly.
 
 ## Requirements
@@ -48,7 +48,7 @@ available on the web to browse.
 
 ## Using SkiaSharp
 
-SkiaSharp is available as a convenient NuGet package, to use install the package like this:
+SkiaSharp is available as a convenient NuGet package. To use it, install the package like this:
 
 ```
 nuget install SkiaSharp
