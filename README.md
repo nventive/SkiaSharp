@@ -1,4 +1,7 @@
-# SkiaSharp for WebAssembly
+# This repository is now in legacy mode and its features have been merged into the official [SkiaSharp](https://github.com/mono/SkiaSharp) repository
+
+
+## SkiaSharp for WebAssembly
 
 SkiaSharp for WebAssembly is a SkiaSharp port that runs on top of the [Uno Platform](https://github.com/nventive/uno), using 
 modified [CanvasKit for WebAssembly](https://github.com/unoplatform/skia).
