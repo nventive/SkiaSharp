@@ -17,16 +17,16 @@ stages:
         pool: ${{ parameters.VM_IMAGE_LINUX }}
         steps:
           - checkout: none
-          - template: azure-templates-variables.yml
-            parameters:
-              updateBuild: true
-          - template: azure-templates-github-status.yml
-            parameters:
-              context: 'SkiaSharp-Tests'
-              state: 'pending'
-              displayName: Queue up the status for the tests pipeline
-          - ${{ if ne(parameters.isBuildPipeline, 'true') }}:
-            - template: azure-templates-github-status.yml
+          #- template: azure-templates-variables.yml
+          #  parameters:
+          #    updateBuild: true
+          #- template: azure-templates-github-status.yml
+          #  parameters:
+          #    context: 'SkiaSharp-Tests'
+          #    state: 'pending'
+          #    displayName: Queue up the status for the tests pipeline
+          #- ${{ if ne(parameters.isBuildPipeline, 'true') }}:
+          #  - template: azure-templates-github-status.yml
 
   - ${{ if eq(parameters.isBuildPipeline, 'true') }}:
     - stage: native_windows
