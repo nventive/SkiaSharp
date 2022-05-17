@@ -25,27 +25,27 @@ parameters:
       pool:
         name: Azure Pipelines
         vmImage: macos-12
-  - name: VM_IMAGE_MAC
-    type: object
-    default:
-      pool:
-        name: VSEng-VSMac-Xamarin-Shared
-        vmImage: VSEng-VSMac-Xamarin-Shared
-        demands:
-          - macOS.Name -equals Monterey
-          - macOS.Architecture -equals x64
-          - Agent.HasDevices -equals False
-          - Agent.IsPaired -equals False
-      variables:
-        XCODE_VERSION: 13.3.0
-      provisioningSteps:
-        - task: xamops.azdevex.provisionator-task.provisionator@1
-          displayName: 'Provision Xamarin'
-          inputs:
-            provisioning_script: ./scripts/provisionator.csx
-            provisioning_extra_args: --force
-          env:
-            AUTH_TOKEN_GITHUB_COM: $(github--pat--vs-mobiletools-engineering-service2)
+  #- name: VM_IMAGE_MAC
+  #  type: object
+  #  default:
+  #    pool:
+  #      name: VSEng-VSMac-Xamarin-Shared
+  #      vmImage: VSEng-VSMac-Xamarin-Shared
+  #      demands:
+  #        - macOS.Name -equals Monterey
+  #        - macOS.Architecture -equals x64
+  #        - Agent.HasDevices -equals False
+  #        - Agent.IsPaired -equals False
+  #    variables:
+  #      XCODE_VERSION: 13.3.0
+  #    provisioningSteps:
+  #      - task: xamops.azdevex.provisionator-task.provisionator@1
+  #        displayName: 'Provision Xamarin'
+  #        inputs:
+  #          provisioning_script: ./scripts/provisionator.csx
+  #          provisioning_extra_args: --force
+  #        env:
+  #          AUTH_TOKEN_GITHUB_COM: $(github--pat--vs-mobiletools-engineering-service2)
   - name: VM_IMAGE_LINUX
     type: object
     default:
