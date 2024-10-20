@@ -109,7 +109,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <WindowsTargetFrameworks>net$(DotNetBaseVersion)-windows10.0.19041.0</WindowsTargetFrameworks>
+    <WindowsTargetFrameworks>net$(DotNetBaseVersion)-windows10.0.18362.0;net$(DotNetBaseVersion)-windows10.0.19041.0</WindowsTargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
