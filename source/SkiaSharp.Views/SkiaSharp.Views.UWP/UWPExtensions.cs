@@ -1,8 +1,8 @@
 ﻿using System;
 using Windows.Foundation;
 using Windows.UI;
+#if WINDOWS && !HAS_UNO
 using Windows.Storage.Streams;
-#if !HAS_UNO
 using SkiaSharp.Views.WinUI.Native;
 #endif
 
@@ -176,8 +176,10 @@ namespace SkiaSharp.Views.UWP
 		internal static IntPtr GetPixels(this WriteableBitmap bitmap) =>
 			bitmap.PixelBuffer.GetByteBuffer();
 
+#if WINDOWS
 		internal static IntPtr GetByteBuffer(this IBuffer buffer) =>
 			(IntPtr)BufferExtensions.GetByteBuffer(buffer);
+#endif
 #endif
 	}
 }
