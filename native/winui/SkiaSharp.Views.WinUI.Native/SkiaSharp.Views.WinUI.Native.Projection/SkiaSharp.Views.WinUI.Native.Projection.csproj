@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>$(WindowsTargetFrameworks)</TargetFramework>
+    <TargetFrameworks>$(WindowsTargetFrameworks)</TargetFrameworks>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <PackageId>SkiaSharp.Views.WinUI</PackageId>
     <PackagingGroup>SkiaSharp.Views.WinUI</PackagingGroup>
