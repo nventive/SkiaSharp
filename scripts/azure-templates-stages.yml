@@ -704,6 +704,7 @@ stages:
             sdl: ${{ parameters.sdl }}
             buildPipelineType: ${{ parameters.buildPipelineType }}
             vmImage: ${{ parameters.VM_IMAGE_WINDOWS}}
+            dependsOn: package_windows
             skipInstall: true
             skipSteps: true
             shouldPublish: false
