@@ -20,9 +20,6 @@
     <Compile Include="..\..\SkiaSharp.Views\SkiaSharp.Views.UWP\**\*.cs" Link="%(RecursiveDir)%(Filename)%(Extension)" Exclude="..\..\SkiaSharp.Views\SkiaSharp.Views.UWP\bin\**;..\..\SkiaSharp.Views\SkiaSharp.Views.UWP\obj\**" />
     <Compile Remove="..\..\SkiaSharp.Views\SkiaSharp.Views.UWP\Interop\IBufferByteAccess.cs" />
   </ItemGroup>
-  <ItemGroup Condition="'$(BuildingInsideVisualStudio)' != 'true'">
-    <ProjectReference Include="..\..\..\binding\SkiaSharp.NativeAssets.WinUI\SkiaSharp.NativeAssets.WinUI.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="..\..\..\output\native\winui\any\*.dll" />
   </ItemGroup>
