@@ -685,6 +685,7 @@ stages:
               - pwsh: |
                   $nupkgs = (Get-ChildItem ".\output\nugets*\*.*nupkg")
                   foreach ($nupkg in $nupkgs) {
+                    get-volume
                     $filename = $nupkg.Name.TrimEnd('.nupkg')
                     $dest = ".\output\extracted_nugets\$filename"
                     Write-Host "Extracting '$nupkg' to '$dest'..."
